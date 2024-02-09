@@ -1,0 +1,6 @@
+
+n	java:S116"RRename this field "API_KEY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Áå¾8Í¿«îØ1
+L	java:S106"+Replace this use of System.out by a logger.(ŞìÆ°úÿÿÿÿ8¼©¸ïØ1
+L	java:S106"+Replace this use of System.out by a logger.(©şêÜúÿÿÿÿ8½©¸ïØ1
+H
+java:S1068"+Remove this unused "API_KEY" private field.(Áå¾8Øï¬îØ1

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+        <groupId>amalitech</groupId>
+        <artifactId>exchange-rate-converter-v1.1</artifactId>
+        <version>1.1</version>
+
+    <url>https://github.com/richard-bouaro/exchange-rate-converter.git</url>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10.1</version>
+        </dependency>
+    </dependencies>
+    <description>A Java library for efficient and accurate currency exchange rate conversion.
+        Delivers accurate and reliable data through integrated currency exchange APIs.
+        Ideal for developers building applications requiring currency conversion functionality.</description>
+
+    <developers>
+        <developer>
+            <name>Richard Bouaro</name>
+            <email>richard.bouaro@amalitech.org</email>
+        </developer>
+    </developers>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>http://creativecommons.org/licenses/MIT/</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git@github.com:richard-bouaro/exchange-rate-converter.git</connection>
+        <developerConnection>scm:git:git@github.com:richard-bouaro/exchange-rate-converter.git</developerConnection>
+        <url>https://github.com/richard-bouaro/exchange-rate-converter.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
+    <build>
+        <plugins>
+        <plugin>
+            <groupId>org.sonatype.central</groupId>
+            <artifactId>central-publishing-maven-plugin</artifactId>
+            <version>0.3.0</version>
+            <extensions>true</extensions>
+            <configuration>
+                <publishingServerId>central</publishingServerId>
+                <tokenAuth>true</tokenAuth>
+            </configuration>
+        </plugin>
+        </plugins>
+    </build>
+
+</project>
