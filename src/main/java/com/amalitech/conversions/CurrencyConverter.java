@@ -33,6 +33,7 @@ public class CurrencyConverter {
      */
     private final String apiKey;
     
+    
     /**
      * Base URL for the currency exchange API.
      */
@@ -133,6 +134,7 @@ public class CurrencyConverter {
      */
     private StringBuilder getExchangeRatesResponse(String baseCurrencyCode) throws IOException {
         try {
+            if (apiKey == null || apiKey.isEmpty()) throw  new IOException("Error: missing api key");
             URL exchangeRateApiUrl = apiConnection.createExchangeRateApiUrl(baserApiUrl, apiKey, "latest/" + baseCurrencyCode);
             HttpURLConnection connection = apiConnection.establishConnection(exchangeRateApiUrl, HttpRequestMethods.GET);
             
@@ -146,7 +148,7 @@ public class CurrencyConverter {
                     throw new IOException("API request failed with status code: " + connection.getResponseCode());
                 }
             }
-            
+           
             return apiConnection.getResponse(connection);
         } catch (IOException e) {
             throw new IOException("Failed to fetch exchange rates: " + e.getMessage());
